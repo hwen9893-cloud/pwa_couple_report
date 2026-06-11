@@ -1,0 +1,1778 @@
+2026-06-10 05:59:01.808942: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-06-10 05:59:01.870471: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-06-10 05:59:04.786854: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1781042347.687905 3837448 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31134 MB memory:  -> device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:3a:00.0, compute capability: 7.0
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/amp/core.py:138: UserWarning: No model named flat found, use default instead.
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/amp/core.py:409: UserWarning: No width provided for NR_pipi_flat_0+, set it to constant
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/amp/core.py:423: UserWarning: 2 decays find for K2(2250)p, will used the first one for bw_l=1
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/config_loader/config_loader.py:1035: UserWarning: Neglect ['f0(500)_E791_mass', 'f0(1370)_mass', 'f0(1370)_width', 'f2(1430)_mass', 'f2(1430)_width', 'f0(980)_flatte_mass', 'f2(1270)_flatte_mass', 'f0(1500)_flatte_mass', 'f0(1710)_mass', 'f0(1710)_width', 'rho(1450)p_mass', 'rho(1450)p_width', 'rho(1570)p_mass', 'rho(1570)p_width', 'rho(1690)p_mass', 'rho(1690)p_width', 'rho(1450)m_mass', 'rho(1450)m_width', 'rho(1570)m_mass', 'rho(1570)m_width', 'rho(1690)m_mass', 'rho(1690)m_width'] when setting params.
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/miniconda3/envs/tf-pwa/lib/python3.12/site-packages/scipy/optimize/_minimize.py:779: OptimizeWarning: Desired error not necessarily achieved due to precision loss.
+  res = _minimize_bfgs(fun, x0, args, jac, callback, **options)
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/config_loader/config_loader.py:1035: UserWarning: Neglect ['f0(500)_E791_mass', 'f0(1370)_mass', 'f0(1370)_width', 'f2(1430)_mass', 'f2(1430)_width', 'f0(980)_flatte_mass', 'f2(1270)_flatte_mass', 'f0(1500)_flatte_mass', 'f0(1710)_mass', 'f0(1710)_width', 'rho(1450)p_mass', 'rho(1450)p_width', 'rho(1570)p_mass', 'rho(1570)p_width', 'rho(1690)p_mass', 'rho(1690)p_width', 'rho(1450)m_mass', 'rho(1450)m_width', 'rho(1570)m_mass', 'rho(1570)m_width', 'rho(1690)m_mass', 'rho(1690)m_width'] when setting params.
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/miniconda3/envs/tf-pwa/lib/python3.12/site-packages/scipy/optimize/_minimize.py:779: OptimizeWarning: Desired error not necessarily achieved due to precision loss.
+  res = _minimize_bfgs(fun, x0, args, jac, callback, **options)
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/config_loader/config_loader.py:1035: UserWarning: Neglect ['f0(500)_E791_mass', 'f0(1370)_mass', 'f0(1370)_width', 'f2(1430)_mass', 'f2(1430)_width', 'f0(980)_flatte_mass', 'f2(1270)_flatte_mass', 'f0(1500)_flatte_mass', 'f0(1710)_mass', 'f0(1710)_width', 'rho(1450)p_mass', 'rho(1450)p_width', 'rho(1570)p_mass', 'rho(1570)p_width', 'rho(1690)p_mass', 'rho(1690)p_width', 'rho(1450)m_mass', 'rho(1450)m_width', 'rho(1570)m_mass', 'rho(1570)m_width', 'rho(1690)m_mass', 'rho(1690)m_width'] when setting params.
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/miniconda3/envs/tf-pwa/lib/python3.12/site-packages/scipy/optimize/_minimize.py:779: OptimizeWarning: Desired error not necessarily achieved due to precision loss.
+  res = _minimize_bfgs(fun, x0, args, jac, callback, **options)
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/config_loader/config_loader.py:1035: UserWarning: Neglect ['f0(500)_E791_mass', 'f0(1370)_mass', 'f0(1370)_width', 'f2(1430)_mass', 'f2(1430)_width', 'f0(980)_flatte_mass', 'f2(1270)_flatte_mass', 'f0(1500)_flatte_mass', 'f0(1710)_mass', 'f0(1710)_width', 'rho(1450)p_mass', 'rho(1450)p_width', 'rho(1570)p_mass', 'rho(1570)p_width', 'rho(1690)p_mass', 'rho(1690)p_width', 'rho(1450)m_mass', 'rho(1450)m_width', 'rho(1570)m_mass', 'rho(1570)m_width', 'rho(1690)m_mass', 'rho(1690)m_width'] when setting params.
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/miniconda3/envs/tf-pwa/lib/python3.12/site-packages/scipy/optimize/_minimize.py:779: OptimizeWarning: Desired error not necessarily achieved due to precision loss.
+  res = _minimize_bfgs(fun, x0, args, jac, callback, **options)
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/config_loader/config_loader.py:1035: UserWarning: Neglect ['f0(500)_E791_mass', 'f0(1370)_mass', 'f0(1370)_width', 'f2(1430)_mass', 'f2(1430)_width', 'f0(980)_flatte_mass', 'f2(1270)_flatte_mass', 'f0(1500)_flatte_mass', 'f0(1710)_mass', 'f0(1710)_width', 'rho(1450)p_mass', 'rho(1450)p_width', 'rho(1570)p_mass', 'rho(1570)p_width', 'rho(1690)p_mass', 'rho(1690)p_width', 'rho(1450)m_mass', 'rho(1450)m_width', 'rho(1570)m_mass', 'rho(1570)m_width', 'rho(1690)m_mass', 'rho(1690)m_width'] when setting params.
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/miniconda3/envs/tf-pwa/lib/python3.12/site-packages/scipy/optimize/_minimize.py:779: OptimizeWarning: Desired error not necessarily achieved due to precision loss.
+  res = _minimize_bfgs(fun, x0, args, jac, callback, **options)
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/config_loader/config_loader.py:1035: UserWarning: Neglect ['f0(500)_E791_mass', 'f0(1370)_mass', 'f0(1370)_width', 'f2(1430)_mass', 'f2(1430)_width', 'f0(980)_flatte_mass', 'f2(1270)_flatte_mass', 'f0(1500)_flatte_mass', 'f0(1710)_mass', 'f0(1710)_width', 'rho(1450)p_mass', 'rho(1450)p_width', 'rho(1570)p_mass', 'rho(1570)p_width', 'rho(1690)p_mass', 'rho(1690)p_width', 'rho(1450)m_mass', 'rho(1450)m_width', 'rho(1570)m_mass', 'rho(1570)m_width', 'rho(1690)m_mass', 'rho(1690)m_width'] when setting params.
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/miniconda3/envs/tf-pwa/lib/python3.12/site-packages/scipy/optimize/_minimize.py:779: OptimizeWarning: Desired error not necessarily achieved due to precision loss.
+  res = _minimize_bfgs(fun, x0, args, jac, callback, **options)
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/config_loader/config_loader.py:1035: UserWarning: Neglect ['f0(500)_E791_mass', 'f0(1370)_mass', 'f0(1370)_width', 'f2(1430)_mass', 'f2(1430)_width', 'f0(980)_flatte_mass', 'f2(1270)_flatte_mass', 'f0(1500)_flatte_mass', 'f0(1710)_mass', 'f0(1710)_width', 'rho(1450)p_mass', 'rho(1450)p_width', 'rho(1570)p_mass', 'rho(1570)p_width', 'rho(1690)p_mass', 'rho(1690)p_width', 'rho(1450)m_mass', 'rho(1450)m_width', 'rho(1570)m_mass', 'rho(1570)m_width', 'rho(1690)m_mass', 'rho(1690)m_width'] when setting params.
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/miniconda3/envs/tf-pwa/lib/python3.12/site-packages/scipy/optimize/_minimize.py:779: OptimizeWarning: Desired error not necessarily achieved due to precision loss.
+  res = _minimize_bfgs(fun, x0, args, jac, callback, **options)
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/config_loader/config_loader.py:1035: UserWarning: Neglect ['f0(500)_E791_mass', 'f0(1370)_mass', 'f0(1370)_width', 'f2(1430)_mass', 'f2(1430)_width', 'f0(980)_flatte_mass', 'f2(1270)_flatte_mass', 'f0(1500)_flatte_mass', 'f0(1710)_mass', 'f0(1710)_width', 'rho(1450)p_mass', 'rho(1450)p_width', 'rho(1570)p_mass', 'rho(1570)p_width', 'rho(1690)p_mass', 'rho(1690)p_width', 'rho(1450)m_mass', 'rho(1450)m_width', 'rho(1570)m_mass', 'rho(1570)m_width', 'rho(1690)m_mass', 'rho(1690)m_width'] when setting params.
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)f2(1270)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)f0(1770)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f0(1770)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f0(1770)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)f2(1950)->pip.pim_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1950)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1950)->pip.pim_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_mass not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)_width not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)p.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)p->phi.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->K2(1430)m.kp_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: K2(1430)m->phi.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f2(1270)_flattef2(1270)_flatte->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f2(1270)_flatte->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)f4(2300)->kp.km_total_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_1i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_2i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_3i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: Jpsi->phi.f4(2300)_g_ls_4i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0r not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:578: UserWarning: f4(2300)->kp.km_g_ls_0i not found
+  warnings.warn("{} not found".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1710)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(980)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1370)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1430)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f0(1500)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(2250)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)p_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K1(1400)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1820)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K2(1980)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of K3(2320)m_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1270)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1525)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1565)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_mass!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/variable.py:414: UserWarning: Overwrite bound of f2(1810)_width!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/hpcfs/bes/gpupwa/wenhw/miniconda3/envs/tf-pwa/lib/python3.12/site-packages/scipy/optimize/_minimize.py:779: OptimizeWarning: Desired error not necessarily achieved due to precision loss.
+  res = _minimize_bfgs(fun, x0, args, jac, callback, **options)
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/utils.py:265: UserWarning: matrix is not positive definited
+  warnings.warn("matrix is not positive definited")
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/applications.py:277: UserWarning: Matrix forced pos-def by adding -0.0 to eigen value
+  warnings.warn(
+/hpcfs/bes/gpupwa/wenhw/tf-pwa/tf_pwa/config_loader/config_loader.py:184: UserWarning: No data file as 'phsp_noeff', using the first 'phsp' file instead.
+  warnings.warn(

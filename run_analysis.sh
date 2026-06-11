@@ -1,0 +1,125 @@
+#!/usr/bin/env zsh
+# 振幅分析一键执行脚本
+# 用法：
+#   ./run_analysis.sh                        # 默认分析 Jobs/ 目录
+#   ./run_analysis.sh --best-only            # 只详细检查最优 job
+#   ./run_analysis.sh --jobs /other/Jobs     # 指定 job 目录
+#   ./run_analysis.sh --no-report            # 跳过 HTML 报告
+#   ./run_analysis.sh --open                 # 分析完成后自动打开报告
+
+set -euo pipefail
+
+# ── 路径配置 ──────────────────────────────────────────────────
+SCRIPT_DIR="${0:A:h}"          # 脚本所在目录（即 609/）
+VENV="$SCRIPT_DIR/.venv"
+ANALYSIS="$SCRIPT_DIR/analysis/analyze.py"
+DEFAULT_JOBS="$SCRIPT_DIR/Jobs"
+DEFAULT_OUTPUT="$SCRIPT_DIR/analysis_output"
+
+# ── 颜色输出 ──────────────────────────────────────────────────
+RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'
+CYAN='\033[0;36m'; BOLD='\033[1m'; RESET='\033[0m'
+
+info()    { print -P "%F{cyan}[INFO]%f  $*"; }
+success() { print -P "%F{green}[OK]%f    $*"; }
+warn()    { print -P "%F{yellow}[WARN]%f  $*"; }
+error()   { print -P "%F{red}[ERROR]%f $*" >&2; exit 1; }
+
+# ── 参数解析 ──────────────────────────────────────────────────
+EXTRA_ARGS=()
+OPEN_REPORT=0
+JOBS_DIR=""
+OUTPUT_DIR=""
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --open)        OPEN_REPORT=1; shift ;;
+        --jobs)        JOBS_DIR="$2"; EXTRA_ARGS+=(--jobs "$2"); shift 2 ;;
+        --output)      OUTPUT_DIR="$2"; EXTRA_ARGS+=(--output "$2"); shift 2 ;;
+        --best-only)   EXTRA_ARGS+=(--best-only); shift ;;
+        --no-report)   OPEN_REPORT=0; EXTRA_ARGS+=(--no-report); shift ;;
+        -h|--help)
+            print "${BOLD}用法：${RESET} $0 [选项]"
+            print "  --jobs <path>    指定 job 根目录（默认：Jobs/）"
+            print "  --output <path>  指定输出目录（默认：analysis_output/）"
+            print "  --best-only      只对最优 job 做详细检查"
+            print "  --no-report      跳过 HTML 报告生成"
+            print "  --open           分析完成后自动打开 report.html"
+            exit 0 ;;
+        *) error "未知参数：$1（用 --help 查看帮助）" ;;
+    esac
+done
+
+[[ -z "$JOBS_DIR"   ]] && JOBS_DIR="$DEFAULT_JOBS"
+[[ -z "$OUTPUT_DIR" ]] && OUTPUT_DIR="$DEFAULT_OUTPUT"
+
+# ── 环境检查 ──────────────────────────────────────────────────
+print ""
+print "${BOLD}══════════════════════════════════════════${RESET}"
+print "${BOLD}   BESIII φhh 振幅分析评估框架${RESET}"
+print "${BOLD}══════════════════════════════════════════${RESET}"
+print ""
+
+# Python 检查
+if [[ ! -f "$VENV/bin/python3" ]]; then
+    warn "未找到虚拟环境 .venv，尝试创建并安装依赖 …"
+    python3 -m venv "$VENV" || error "创建虚拟环境失败，请确认 python3 已安装"
+    "$VENV/bin/pip" install -q --upgrade pip
+    "$VENV/bin/pip" install -q -r "$SCRIPT_DIR/requirements.txt" \
+        || error "依赖安装失败，请检查网络或手动运行 pip install -r requirements.txt"
+    success "虚拟环境创建完成"
+fi
+
+PYTHON="$VENV/bin/python3"
+
+# Jobs 目录检查
+if [[ ! -d "$JOBS_DIR" ]]; then
+    error "Jobs 目录不存在：$JOBS_DIR"
+fi
+
+N_JOBS=$(find "$JOBS_DIR" -maxdepth 2 -name "final_params.json" 2>/dev/null | wc -l | tr -d ' ')
+if [[ "$N_JOBS" -eq 0 ]]; then
+    error "在 $JOBS_DIR 中未找到包含 final_params.json 的 job 目录"
+fi
+
+info "Jobs 目录 : $JOBS_DIR"
+info "输出目录  : $OUTPUT_DIR"
+info "有效 jobs : $N_JOBS 个"
+print ""
+
+# ── 执行分析 ──────────────────────────────────────────────────
+START=$(date +%s)
+
+"$PYTHON" "$ANALYSIS" \
+    --jobs    "$JOBS_DIR"   \
+    --output  "$OUTPUT_DIR" \
+    "${EXTRA_ARGS[@]}"
+
+END=$(date +%s)
+ELAPSED=$(( END - START ))
+
+print ""
+success "分析完成（耗时 ${ELAPSED}s）"
+info "输出目录：$OUTPUT_DIR"
+
+# 列出生成文件
+if [[ -d "$OUTPUT_DIR" ]]; then
+    print ""
+    print "${BOLD}生成文件：${RESET}"
+    [[ -f "$OUTPUT_DIR/report.html"  ]] && print "  ✓  report.html"
+    [[ -f "$OUTPUT_DIR/results.json" ]] && print "  ✓  results.json"
+    N_PNG=$(find "$OUTPUT_DIR/plots" -name "*.png" 2>/dev/null | wc -l | tr -d ' ')
+    [[ "$N_PNG" -gt 0 ]] && print "  ✓  plots/*.png（$N_PNG 张）"
+fi
+
+# 自动打开报告
+REPORT="$OUTPUT_DIR/report.html"
+if [[ "$OPEN_REPORT" -eq 1 && -f "$REPORT" ]]; then
+    print ""
+    info "正在打开报告 …"
+    open "$REPORT"
+elif [[ -f "$REPORT" ]]; then
+    print ""
+    info "查看报告：open $REPORT"
+fi
+print ""

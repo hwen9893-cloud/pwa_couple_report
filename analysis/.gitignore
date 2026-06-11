@@ -1,0 +1,13 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+# 分析输出（体积大，通常不上传）
+analysis_output/
+# macOS
+.DS_Store
+# 编辑器
+.cursor/
+*.swp
