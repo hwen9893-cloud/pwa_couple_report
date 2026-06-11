@@ -69,13 +69,12 @@ def compare_aic(jobs: list[JobData]) -> list[dict]:
     # Best by AIC (may differ from best NLL if a simpler model is preferable)
     best_aic   = min(a for _, a in valid)
 
-    # Akaike weights
+    # Akaike weights  w_i = exp(-0.5·ΔAIC_i) / Σ exp(-0.5·ΔAIC_j)
+    # ΔAIC_i ≥ 0 by construction; clamp at 700 so exp(-350) ≈ 0 without overflow.
     aics       = [a for _, a in valid]
     delta_aics = [a - best_aic for a in aics]
-    # Numerical stability: subtract max before exp
-    max_d      = max(delta_aics)
-    exp_terms  = [math.exp(-0.5 * (d - max_d)) for d in delta_aics]
-    total      = sum(exp_terms)
+    exp_terms  = [math.exp(-0.5 * min(d, 700.0)) for d in delta_aics]
+    total      = sum(exp_terms) or 1.0
     weights    = [e / total for e in exp_terms]
 
     results = []
