@@ -1,0 +1,15 @@
+universe                = vanilla
+executable              = /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260707_063738/013_add_f2_1810/run_condor.sh
+initialdir              = /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260707_063738/013_add_f2_1810
+output                  = /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260707_063738/013_add_f2_1810/condor_logs/condor_$(ClusterId).$(ProcId).out
+error                   = /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260707_063738/013_add_f2_1810/condor_logs/condor_$(ClusterId).$(ProcId).err
+log                     = /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260707_063738/013_add_f2_1810/condor_logs/condor_$(ClusterId).log
+
+request_cpus            = 4
+request_memory          = 30GB
+request_gpus            = 1
++JobFlavour             = "nextweek"
+batch_name              = phipipi_20260707_063738_013_add_f2_1810
+should_transfer_files   = NO
+getenv                  = True
+queue

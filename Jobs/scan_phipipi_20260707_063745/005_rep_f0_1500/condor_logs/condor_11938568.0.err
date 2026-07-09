@@ -1,0 +1,44 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783414390.904522     133 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1783414390.930206     133 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/amp/core.py:136: UserWarning: No model named E791 found, use default instead.
+  warnings.warn(
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f2(1270)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f2(1270)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f2(1430)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f2(1430)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f0(1370)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f0(1370)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f0(1500)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f0(1500)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f0(1525)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f0(1525)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f0(1565)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f0(1565)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f0(1710)_flatte_g_0!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/variable.py:417: UserWarning: Overwrite bound of f0(1710)_flatte_g_1!
+  warnings.warn("Overwrite bound of {}!".format(name))
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/amp/core.py:407: UserWarning: No width provided for f0(500)_E791, set it to constant
+  warnings.warn(
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/amp/core.py:421: UserWarning: 2 decays find for K2(2250)p, will used the first one for bw_l=1
+  warnings.warn(
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/utils.py:265: UserWarning: matrix is not positive definited
+  warnings.warn("matrix is not positive definited")
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/applications.py:277: UserWarning: Matrix forced pos-def by adding -0j to eigen value
+  warnings.warn(
+/afs/cern.ch/work/h/hwen/public/tf-pwa/tf_pwa/config_loader/config_loader.py:184: UserWarning: No data file as 'phsp_noeff', using the first 'phsp' file instead.
+  warnings.warn(

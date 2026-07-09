@@ -1,0 +1,62 @@
+# Initial states for J/ψ → φK⁺K⁻
+# Based on: new_baseline/baseline_f42300/config/States_fix.yaml
+# Uncomment entries to extend the model during significance scan.
+
+kstp:
+    # S wave  1+
+    - K1(1400)p
+   # - K1(1650)p
+   # - K1(1680)p
+   # P wave  0- 1- 2-
+   # - K0(1830)p
+   # - K1(1410)p
+   # - K2(1580)p
+   # - K2(1770)p
+   # - K2(1820)p
+   # - K2(2250)p
+   # D wave  1+ 2+ 3+
+    - K2(1820)p
+    - K2(1980)p
+    - K2(2250)p
+    - K3(2320)p
+    # F wave  2- 3- 4-
+    # - K3(1780)p
+
+kstm: 
+    # S wave  1+
+    - K1(1400)m
+  # - K1(1650)m
+  # - K1(1680)m
+  # P wave  0- 1- 2-
+  # - K0(1830)m
+  # - K1(1410)m
+  # - K2(1580)m
+  # - K2(1770)m
+  # - K2(1820)m
+  # - K2(2250)m
+  # D wave  1+ 2+ 3+
+    - K2(1820)m
+    - K2(1980)m
+    - K2(2250)p
+    - K3(2320)m
+   # F wave  2- 3- 4-
+    # - K3(1780)m
+
+kk:
+    # 带 _flatte 后缀的资源在 KK / ππ 道之间共享 g_0、g_1（耦合道分析的真正耦合点）。
+    - f0(980)_flatte
+    - f2(1270)
+    - f0(1500)_flatte
+    - f2(1525)
+    - f2(1565)
+    - f0(1710)
+    - f2(1810)
+    # - f0(1370)_flatte
+    # - f2(1430)
+    # - f2(1640)
+    # - f0(2100)
+    # - f2(2150)_flatte
+    # - f0(2200)
+    # - f2(2300)_flatte
+    # - f4(2050)
+    # - f2(2340)
