@@ -9,6 +9,13 @@
 
 set -euo pipefail
 
+# ── LCG 环境（仅 lxplus / CVMFS 可用时加载）─────────────────
+_LCG="/cvmfs/sft.cern.ch/lcg/views/LCG_106/x86_64-el9-gcc13-opt/setup.sh"
+if [[ -f "$_LCG" ]]; then
+    # shellcheck disable=SC1090
+    source "$_LCG"
+fi
+
 # ── 路径配置 ──────────────────────────────────────────────────
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV="$SCRIPT_DIR/.venv"
