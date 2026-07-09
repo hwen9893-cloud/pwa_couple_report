@@ -63,10 +63,36 @@ echo ""
 # Python 检查
 if [[ ! -f "$VENV/bin/python3" ]]; then
     warn "未找到虚拟环境 .venv，尝试创建并安装依赖 …"
-    python3 -m venv "$VENV" || error "创建虚拟环境失败，请确认 python3 已安装"
+
+    # 优先使用 LCG / conda 提供的较新 Python；回退到系统 python3
+    PYTHON_BIN=""
+    for candidate in python3.11 python3.10 python3.9 python3; do
+        if command -v "$candidate" &>/dev/null; then
+            PYTHON_BIN="$(command -v "$candidate")"
+            break
+        fi
+    done
+    [[ -z "$PYTHON_BIN" ]] && error "未找到可用的 python3，请先加载 Python 环境"
+
+    info "使用 Python：$PYTHON_BIN ($(${PYTHON_BIN} --version 2>&1))"
+    "$PYTHON_BIN" -m venv "$VENV" || error "创建虚拟环境失败"
     "$VENV/bin/pip" install -q --upgrade pip
     "$VENV/bin/pip" install -q -r "$SCRIPT_DIR/requirements.txt" \
         || error "依赖安装失败，请检查网络或手动运行 pip install -r requirements.txt"
+
+    # 验证核心依赖可正常 import（捕获 libffi / ABI 等底层错误）
+    if ! "$VENV/bin/python3" -c "import numpy, scipy, matplotlib" 2>/dev/null; then
+        echo ""
+        echo -e "${RED}[ERROR]${RESET} 虚拟环境验证失败（可能是 libffi / Python ABI 不兼容）"
+        echo ""
+        echo "  lxplus 解决方法："
+        echo "    source /cvmfs/sft.cern.ch/lcg/views/LCG_106/x86_64-el9-gcc13-opt/setup.sh"
+        echo "    rm -rf $VENV"
+        echo "    ./run_analysis.sh"
+        echo ""
+        rm -rf "$VENV"
+        exit 1
+    fi
     success "虚拟环境创建完成"
 fi
 
