@@ -77,7 +77,7 @@ if [[ ! -d "$JOBS_DIR" ]]; then
     error "Jobs 目录不存在：$JOBS_DIR"
 fi
 
-N_JOBS=$(find "$JOBS_DIR" -maxdepth 2 -name "final_params.json" 2>/dev/null | wc -l | tr -d ' ')
+N_JOBS=$(find "$JOBS_DIR" -maxdepth 3 -name "final_params.json" 2>/dev/null | wc -l | tr -d ' ')
 if [[ "$N_JOBS" -eq 0 ]]; then
     error "在 $JOBS_DIR 中未找到包含 final_params.json 的 job 目录"
 fi
@@ -103,17 +103,31 @@ success "分析完成（耗时 ${ELAPSED}s）"
 info "输出目录：$OUTPUT_DIR"
 
 # 列出生成文件
+REPORT="$OUTPUT_DIR/report.html"
+DOCS_DIR="$SCRIPT_DIR/docs"
+DOCS_INDEX="$DOCS_DIR/index.html"
+
 if [[ -d "$OUTPUT_DIR" ]]; then
     print ""
     print "${BOLD}生成文件：${RESET}"
-    [[ -f "$OUTPUT_DIR/report.html"  ]] && print "  ✓  report.html"
+    [[ -f "$REPORT"  ]] && print "  ✓  report.html"
     [[ -f "$OUTPUT_DIR/results.json" ]] && print "  ✓  results.json"
     N_PNG=$(find "$OUTPUT_DIR/plots" -name "*.png" 2>/dev/null | wc -l | tr -d ' ')
     [[ "$N_PNG" -gt 0 ]] && print "  ✓  plots/*.png（$N_PNG 张）"
 fi
 
+# 同步报告到 docs/index.html
+if [[ -f "$REPORT" ]]; then
+    print ""
+    info "同步报告：cp $REPORT → $DOCS_INDEX"
+    mkdir -p "$DOCS_DIR"
+    cp "$REPORT" "$DOCS_INDEX"
+    success "已更新 docs/index.html"
+else
+    warn "未找到 $REPORT，跳过 docs/index.html 同步"
+fi
+
 # 自动打开报告
-REPORT="$OUTPUT_DIR/report.html"
 if [[ "$OPEN_REPORT" -eq 1 && -f "$REPORT" ]]; then
     print ""
     info "正在打开报告 …"
