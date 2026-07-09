@@ -13,7 +13,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV="$SCRIPT_DIR/.venv"
 ANALYSIS="$SCRIPT_DIR/analysis/analyze.py"
-DEFAULT_JOBS="$SCRIPT_DIR/../Jobs"
+DEFAULT_JOBS="$SCRIPT_DIR/Jobs"
 DEFAULT_OUTPUT="$SCRIPT_DIR/analysis_output"
 
 # ── 颜色输出 ──────────────────────────────────────────────────

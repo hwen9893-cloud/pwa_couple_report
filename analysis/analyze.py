@@ -322,8 +322,8 @@ def main():
     parser.add_argument(
         "--jobs",
         type=Path,
-        default=Path(__file__).parent.parent.parent / "Jobs",
-        help="Root directory containing job_* subdirectories (default: ../Jobs relative to workspace root)",
+        default=Path(__file__).parent.parent / "Jobs",
+        help="Root directory containing job_* subdirectories (default: Jobs/ relative to workspace root)",
     )
     parser.add_argument(
         "--output",

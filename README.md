@@ -337,9 +337,19 @@ for row in sg.delta_nll_table():
 
 ## 环境要求
 
-- Python 3.10+
-- 依赖：`numpy >= 1.24`、`scipy >= 1.10`、`matplotlib >= 3.7`
+- Python 3.7+（推荐 3.10+；lxplus 可通过 CVMFS 加载，见下）
+- 依赖：`numpy >= 1.19`、`scipy >= 1.7`、`matplotlib >= 3.3`
 - 无需 TensorFlow 或 tf-pwa（仅读取上游输出文件）
+
+### lxplus 环境配置
+
+```bash
+# 加载 CVMFS Python 3.11 环境（推荐）
+source /cvmfs/sft.cern.ch/lcg/views/LCG_106/x86_64-el9-gcc13-opt/setup.sh
+
+# 运行分析
+./run_analysis.sh
+```
 
 ---
 
@@ -353,6 +363,78 @@ for row in sg.delta_nll_table():
 | 扫描组加载为 0 个作业 | `scan_summary.txt` 缺失或格式异常 | 检查文件是否存在；手动查看表头格式 |
 | HTML 报告 §6 公式乱码 | 浏览器字符集设置问题 | 确认页面 `<meta charset="utf-8">` 存在 |
 | `--no-scan` 导致退出码 1 | `Jobs/` 目录仅含 scan 子目录，无 `job_*` 顶层作业 | 改用不带 `--no-scan` 的命令或 `--scans-only` |
+
+---
+
+## Git 使用说明
+
+### 克隆仓库
+
+```bash
+git clone git@github.com:hwen9893-cloud/pwa_couple_report.git
+cd pwa_couple_report
+```
+
+### 日常推送（不含 Jobs）
+
+```bash
+git add analysis/ run_analysis.sh requirements.txt README.md
+git commit -m "描述本次修改"
+git push origin main
+```
+
+### 推送 Jobs 目录
+
+`Jobs/` 默认已排除 `figure/`（生成的 PNG 图）和 `*.npy`（误差矩阵二进制文件），其余数据文件（yaml/json/csv/log 等）会被追踪。
+
+```bash
+# 推送全部内容（含 Jobs 数据文件）
+git add -A
+git commit -m "add/update Jobs scan data"
+git push origin main
+```
+
+**如需完全排除 Jobs 目录**（只推送代码），在 `.gitignore` 中将上述规则替换为：
+
+```
+Jobs/
+```
+
+然后执行：
+
+```bash
+git rm -r --cached Jobs/   # 从追踪中移除（本地文件不删除）
+git add .gitignore
+git commit -m "chore: stop tracking Jobs/"
+git push origin main
+```
+
+### lxplus 上推送（SSH 认证）
+
+lxplus 没有 GUI，无法使用密码弹窗，需配置 SSH 密钥：
+
+```bash
+# 1. 生成密钥（如果还没有）
+ssh-keygen -t ed25519 -C "your_email@cern.ch"
+
+# 2. 查看公钥并添加到 GitHub（Settings → SSH keys）
+cat ~/.ssh/id_ed25519.pub
+
+# 3. 添加远程地址（SSH 协议）
+git remote add origin git@github.com:hwen9893-cloud/pwa_couple_report.git
+
+# 4. 推送
+git push -u origin main
+```
+
+之后每次在 lxplus 上推送只需：
+
+```bash
+cd /path/to/pwa_couple_report
+git add -A
+git commit -m "描述"
+git push origin main
+```
 
 ---
 
