@@ -12,8 +12,10 @@ set -euo pipefail
 # ── LCG 环境（仅 lxplus / CVMFS 可用时加载）─────────────────
 _LCG="/cvmfs/sft.cern.ch/lcg/views/LCG_106/x86_64-el9-gcc13-opt/setup.sh"
 if [[ -f "$_LCG" ]]; then
+    set +u  # LCG setup.sh 内部使用了未声明变量，临时关闭 -u
     # shellcheck disable=SC1090
     source "$_LCG"
+    set -u
 fi
 
 # ── 路径配置 ──────────────────────────────────────────────────
