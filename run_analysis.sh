@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 # 振幅分析一键执行脚本
 # 用法：
 #   ./run_analysis.sh                        # 默认分析 Jobs/ 目录
@@ -10,20 +10,20 @@
 set -euo pipefail
 
 # ── 路径配置 ──────────────────────────────────────────────────
-SCRIPT_DIR="${0:A:h}"          # 脚本所在目录（即 609/）
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV="$SCRIPT_DIR/.venv"
 ANALYSIS="$SCRIPT_DIR/analysis/analyze.py"
-DEFAULT_JOBS="$SCRIPT_DIR/Jobs"
+DEFAULT_JOBS="$SCRIPT_DIR/../Jobs"
 DEFAULT_OUTPUT="$SCRIPT_DIR/analysis_output"
 
 # ── 颜色输出 ──────────────────────────────────────────────────
 RED='\033[0;31m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'
 CYAN='\033[0;36m'; BOLD='\033[1m'; RESET='\033[0m'
 
-info()    { print -P "%F{cyan}[INFO]%f  $*"; }
-success() { print -P "%F{green}[OK]%f    $*"; }
-warn()    { print -P "%F{yellow}[WARN]%f  $*"; }
-error()   { print -P "%F{red}[ERROR]%f $*" >&2; exit 1; }
+info()    { echo -e "${CYAN}[INFO]${RESET}  $*"; }
+success() { echo -e "${GREEN}[OK]${RESET}    $*"; }
+warn()    { echo -e "${YELLOW}[WARN]${RESET}  $*"; }
+error()   { echo -e "${RED}[ERROR]${RESET} $*" >&2; exit 1; }
 
 # ── 参数解析 ──────────────────────────────────────────────────
 EXTRA_ARGS=()
@@ -39,12 +39,12 @@ while [[ $# -gt 0 ]]; do
         --best-only)   EXTRA_ARGS+=(--best-only); shift ;;
         --no-report)   OPEN_REPORT=0; EXTRA_ARGS+=(--no-report); shift ;;
         -h|--help)
-            print "${BOLD}用法：${RESET} $0 [选项]"
-            print "  --jobs <path>    指定 job 根目录（默认：Jobs/）"
-            print "  --output <path>  指定输出目录（默认：analysis_output/）"
-            print "  --best-only      只对最优 job 做详细检查"
-            print "  --no-report      跳过 HTML 报告生成"
-            print "  --open           分析完成后自动打开 report.html"
+            echo -e "${BOLD}用法：${RESET} $0 [选项]"
+            echo    "  --jobs <path>    指定 job 根目录（默认：Jobs/）"
+            echo    "  --output <path>  指定输出目录（默认：analysis_output/）"
+            echo    "  --best-only      只对最优 job 做详细检查"
+            echo    "  --no-report      跳过 HTML 报告生成"
+            echo    "  --open           分析完成后自动打开 report.html"
             exit 0 ;;
         *) error "未知参数：$1（用 --help 查看帮助）" ;;
     esac
@@ -54,11 +54,11 @@ done
 [[ -z "$OUTPUT_DIR" ]] && OUTPUT_DIR="$DEFAULT_OUTPUT"
 
 # ── 环境检查 ──────────────────────────────────────────────────
-print ""
-print "${BOLD}══════════════════════════════════════════${RESET}"
-print "${BOLD}   BESIII φhh 振幅分析评估框架${RESET}"
-print "${BOLD}══════════════════════════════════════════${RESET}"
-print ""
+echo ""
+echo -e "${BOLD}══════════════════════════════════════════${RESET}"
+echo -e "${BOLD}   BESIII φhh 振幅分析评估框架${RESET}"
+echo -e "${BOLD}══════════════════════════════════════════${RESET}"
+echo ""
 
 # Python 检查
 if [[ ! -f "$VENV/bin/python3" ]]; then
@@ -85,7 +85,7 @@ fi
 info "Jobs 目录 : $JOBS_DIR"
 info "输出目录  : $OUTPUT_DIR"
 info "有效 jobs : $N_JOBS 个"
-print ""
+echo ""
 
 # ── 执行分析 ──────────────────────────────────────────────────
 START=$(date +%s)
@@ -98,7 +98,7 @@ START=$(date +%s)
 END=$(date +%s)
 ELAPSED=$(( END - START ))
 
-print ""
+echo ""
 success "分析完成（耗时 ${ELAPSED}s）"
 info "输出目录：$OUTPUT_DIR"
 
@@ -108,17 +108,17 @@ DOCS_DIR="$SCRIPT_DIR/docs"
 DOCS_INDEX="$DOCS_DIR/index.html"
 
 if [[ -d "$OUTPUT_DIR" ]]; then
-    print ""
-    print "${BOLD}生成文件：${RESET}"
-    [[ -f "$REPORT"  ]] && print "  ✓  report.html"
-    [[ -f "$OUTPUT_DIR/results.json" ]] && print "  ✓  results.json"
+    echo ""
+    echo -e "${BOLD}生成文件：${RESET}"
+    [[ -f "$REPORT"  ]] && echo "  ✓  report.html"
+    [[ -f "$OUTPUT_DIR/results.json" ]] && echo "  ✓  results.json"
     N_PNG=$(find "$OUTPUT_DIR/plots" -name "*.png" 2>/dev/null | wc -l | tr -d ' ')
-    [[ "$N_PNG" -gt 0 ]] && print "  ✓  plots/*.png（$N_PNG 张）"
+    [[ "$N_PNG" -gt 0 ]] && echo "  ✓  plots/*.png（$N_PNG 张）"
 fi
 
 # 同步报告到 docs/index.html
 if [[ -f "$REPORT" ]]; then
-    print ""
+    echo ""
     info "同步报告：cp $REPORT → $DOCS_INDEX"
     mkdir -p "$DOCS_DIR"
     cp "$REPORT" "$DOCS_INDEX"
@@ -127,13 +127,12 @@ else
     warn "未找到 $REPORT，跳过 docs/index.html 同步"
 fi
 
-# 自动打开报告
+# 自动打开报告（lxplus 无 GUI，open 命令不可用，仅打印路径）
 if [[ "$OPEN_REPORT" -eq 1 && -f "$REPORT" ]]; then
-    print ""
-    info "正在打开报告 …"
-    open "$REPORT"
+    echo ""
+    info "报告路径：$REPORT"
 elif [[ -f "$REPORT" ]]; then
-    print ""
-    info "查看报告：open $REPORT"
+    echo ""
+    info "查看报告：$REPORT"
 fi
-print ""
+echo ""
