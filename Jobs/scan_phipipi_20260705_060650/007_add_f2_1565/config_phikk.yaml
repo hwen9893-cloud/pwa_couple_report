@@ -1,0 +1,161 @@
+data:
+    dat_order: [phi, kp, km]
+
+    # TODO: 替换为实际数据路径
+    #data:        [["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/09_p5C_data.dat"],["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/12_p5C_data.dat"]]
+    data:        [["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/09_p5C_data.dat"]]
+    #data_weight: [["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/09_sweight_data.dat"],["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/12_sweight_data.dat"]]
+    data_weight: [["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/09_sweight_data.dat"]]
+
+    #phsp:        [["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/09_p5C_phsp_sub.dat"],["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/12_p5C_phsp_sub.dat"]]
+    phsp:        [["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/09_p5C_phsp.dat"]]
+    #phsp_weight: [["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/09_sweight_phsp_sub.dat"],["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/12_sweight_phsp_sub.dat"]]
+    phsp_weight: [["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/09_sweight_phsp.dat"]]
+
+#    phsp_noeff: ["/afs/cern.ch/work/h/hwen/public/dat_file/phikk_dat/phsp_noeff_100k.dat"]
+
+    r_boost: True
+    random_z: False
+    center_mass: True
+
+    lazy_call: False
+    amp_model: cached_shape
+    preprocessor: cached_shape
+    use_tf_function: True
+
+    # 显存不大时建议开启：
+    # cached_data: "./all_data.npy"
+    # cached_lazy_file: "./lazy_cache.npz"
+
+decay:
+    Jpsi:
+        - [kstp, km, barrier_factor_norm: True]
+        - [kstm, kp, barrier_factor_norm: True]
+        - [phi,  kk, barrier_factor_norm: True]
+    kstp:
+        - [phi, kp, barrier_factor_norm: True]
+    kstm:
+        - [phi, km, barrier_factor_norm: True]
+    kk:
+        - [kp, km, barrier_factor_norm: True]
+
+
+particle:
+    $top:
+        Jpsi: { J: 1, P: -1, spins: [-1, 1], mass: 3.0969, width: 0 }
+    $finals:
+        kp:  { J: 0, P: -1, mass: 0.493677, width: 0.0000, display: "$K^{+}$" }
+        km:  { J: 0, P: -1, mass: 0.493677, width: 0.0000, display: "$K^{-}$" }
+        phi: { J: 1, P: -1, mass: 1.01946,  width: 0.000,  display: "$\\phi$" }
+    $include:
+        - ./Resonances.yaml
+        - ./States_phikk.yaml
+
+
+constrains:
+    decay: { fix_chain_idx: 0, fix_chain_val: 1 }
+    # Flatte 耦合常数 g_0 / g_1 必须 >= 0（避免 g 反号造成的离散二义性）
+    # 这些参数与 config_phipipi.yaml 共享 → 这里加约束就同时约束了 ππ 道
+    var_range:
+        "f0(980)_flatte_g_0":  [0.0, null]
+        "f0(980)_flatte_g_1":  [0.0, null]
+        "f2(1270)_flatte_g_0": [0.0, null]
+        "f2(1270)_flatte_g_1": [0.0, null]
+        "f2(1430)_flatte_g_0": [0.0, null]
+        "f2(1430)_flatte_g_1": [0.0, null]
+        "f0(1370)_flatte_g_0": [0.0, null]
+        "f0(1370)_flatte_g_1": [0.0, null]
+        "f0(1500)_flatte_g_0": [0.0, null]
+        "f0(1500)_flatte_g_1": [0.0, null]
+    var_equal:
+
+     -  ["Jpsi->K1(1400)p.kmK1(1400)p->phi.kp_total_0i", "Jpsi->K1(1400)m.kpK1(1400)m->phi.km_total_0i"]
+     -  ["Jpsi->K1(1400)p.km_g_ls_0i", "Jpsi->K1(1400)m.kp_g_ls_0i"]
+     -  ["Jpsi->K1(1400)p.km_g_ls_1i", "Jpsi->K1(1400)m.kp_g_ls_1i"]
+     -  ["Jpsi->K1(1650)p.kmK1(1650)p->phi.kp_total_0i", "Jpsi->K1(1650)m.kpK1(1650)m->phi.km_total_0i"]
+     -  ["Jpsi->K1(1650)p.km_g_ls_0i", "Jpsi->K1(1650)m.kp_g_ls_0i"]
+     -  ["Jpsi->K1(1650)p.km_g_ls_1i", "Jpsi->K1(1650)m.kp_g_ls_1i"]
+     -  ["Jpsi->K1(1680)p.kmK1(1680)p->phi.kp_total_0i", "Jpsi->K1(1680)m.kpK1(1680)m->phi.km_total_0i"]
+     -  ["Jpsi->K1(1680)p.km_g_ls_0i", "Jpsi->K1(1680)m.kp_g_ls_0i"]
+     -  ["Jpsi->K1(1680)p.km_g_ls_1i", "Jpsi->K1(1680)m.kp_g_ls_1i"]
+     -  ["Jpsi->K0(1830)p.kmK0(1830)p->phi.kp_total_0i", "Jpsi->K0(1830)m.kpK0(1830)m->phi.km_total_0i"]
+     -  ["Jpsi->K0(1950)p.kmK0(1950)p->phi.kp_total_0i", "Jpsi->K0(1950)m.kpK0(1950)m->phi.km_total_0i"]
+
+     -  ["Jpsi->K2(1430)p.kmK2(1430)p->phi.kp_total_0i", "Jpsi->K2(1430)m.kpK2(1430)m->phi.km_total_0i"]
+     -  ["Jpsi->K2(1430)p.km_g_ls_0i", "Jpsi->K2(1430)m.kp_g_ls_0i"]
+     -  ["Jpsi->K2(1430)p.km_g_ls_1i", "Jpsi->K2(1430)m.kp_g_ls_1i"]
+
+     -  ["Jpsi->K2(1580)p.kmK2(1580)p->phi.kp_total_0i", "Jpsi->K2(1580)m.kpK2(1580)m->phi.km_total_0i"]
+     -  ["Jpsi->K2(1580)p.km_g_ls_0i", "Jpsi->K2(1580)m.kp_g_ls_0i"]
+     -  ["Jpsi->K2(1580)p.km_g_ls_1i", "Jpsi->K2(1580)m.kp_g_ls_1i"]
+
+     -  ["Jpsi->K2(1770)p.kmK2(1770)p->phi.kp_total_0i", "Jpsi->K2(1770)m.kpK2(1770)m->phi.km_total_0i"]
+     -  ["Jpsi->K2(1770)p.km_g_ls_0i", "Jpsi->K2(1770)m.kp_g_ls_0i"]
+     -  ["Jpsi->K2(1770)p.km_g_ls_1i", "Jpsi->K2(1770)m.kp_g_ls_1i"]
+
+     -  ["Jpsi->K2(1820)p.kmK2(1820)p->phi.kp_total_0i", "Jpsi->K2(1820)m.kpK2(1820)m->phi.km_total_0i"]
+     -  ["Jpsi->K2(1820)p.km_g_ls_0i", "Jpsi->K2(1820)m.kp_g_ls_0i"]
+     -  ["Jpsi->K2(1820)p.km_g_ls_1i", "Jpsi->K2(1820)m.kp_g_ls_1i"]
+
+     -  ["Jpsi->K2(1980)p.kmK2(1980)p->phi.kp_total_0i", "Jpsi->K2(1980)m.kpK2(1980)m->phi.km_total_0i"]
+     -  ["Jpsi->K2(1980)p.km_g_ls_0i", "Jpsi->K2(1980)m.kp_g_ls_0i"]
+     -  ["Jpsi->K2(1980)p.km_g_ls_1i", "Jpsi->K2(1980)m.kp_g_ls_1i"]
+
+     -  ["Jpsi->K2(2250)p.kmK2(2250)p->phi.kp_total_0i", "Jpsi->K2(2250)m.kpK2(2250)m->phi.km_total_0i"]
+     -  ["Jpsi->K2(2250)p.km_g_ls_0i", "Jpsi->K2(2250)m.kp_g_ls_0i"]
+     -  ["Jpsi->K2(2250)p.km_g_ls_1i", "Jpsi->K2(2250)m.kp_g_ls_1i"]
+
+     -  ["Jpsi->K3(1780)p.kmK3(1780)p->phi.kp_total_0i", "Jpsi->K3(1780)m.kpK3(1780)m->phi.km_total_0i"]
+     -  ["Jpsi->K3(1780)p.km_g_ls_0i", "Jpsi->K3(1780)m.kp_g_ls_0i"]
+     -  ["Jpsi->K3(1780)p.km_g_ls_1i", "Jpsi->K3(1780)m.kp_g_ls_1i"]
+
+     -  ["Jpsi->K3(2320)p.kmK3(2320)p->phi.kp_total_0i", "Jpsi->K3(2320)m.kpK3(2320)m->phi.km_total_0i"]
+     -  ["Jpsi->K3(2320)p.km_g_ls_0i", "Jpsi->K3(2320)m.kp_g_ls_0i"]
+     -  ["Jpsi->K3(2320)p.km_g_ls_1i", "Jpsi->K3(2320)m.kp_g_ls_1i"]
+
+#    -  ["Jpsi->K4(2045)p.kmK4(2045)p->phi.kp_total_0i", "Jpsi->K4(2045)m.kpK4(2045)m->phi.km_total_0i"]
+#    -  ["Jpsi->K4(2045)p.km_g_ls_0i", "Jpsi->K4(2045)m.kp_g_ls_0i"]
+#    -  ["Jpsi->K4(2045)p.km_g_ls_1i", "Jpsi->K4(2045)m.kp_g_ls_1i"]
+
+
+plot:
+    config:
+        bins: 100
+        legend: False
+    mass:
+        kstp:
+            display: "$M(\\phi K^{+})$"
+        kstm:
+            display: "$M(\\phi K^{-})$"
+        kk:
+            display: "$M(K^{+}K^{-})$"
+            bins: 150
+            legend: True
+
+    angle:
+        Jpsi/kstp/kp:
+            alpha:
+                display: "$\\phi(\\theta_{\\phi K^{+}}^{K^{+}})$"
+            cos(beta):
+                display: "$\\cos(\\theta_{\\phi K^{+}}^{K^{+}})$"
+                legend: False
+        Jpsi/kk/kp:
+            cos(beta):
+                display: "$\\cos(\\theta_{K^+K^-}^{K^+})$"
+
+    2Dplot:
+        dalitz_phiKp_KpKm:
+            x: m_kk**2
+            y: m_kstp**2
+            display: "$M(\\phi K^{+})^2$ vs $M(K^{+} K^{-})^2$"
+            plot_figs: ["data_hist", "fitted", "pull"]
+        dalitz_phiKm_KpKm:
+            x: m_kk**2
+            y: m_kstm**2
+            display: "$M(\\phi K^{-})^2$ vs $M(K^{+} K^{-})^2$"
+            plot_figs: ["data_hist", "fitted", "pull"]
+        dalitz_phiKp_phiKm:
+            x: m_kstp**2
+            y: m_kstm**2
+            display: "$M(\\phi K^{+})^2$ vs $M(\\phi K^{-})^2$"
+            plot_figs: ["data_hist", "fitted", "pull"]

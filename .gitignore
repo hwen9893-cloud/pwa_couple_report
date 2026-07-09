@@ -14,4 +14,7 @@ analysis_output/
 # 编辑器
 .cursor/
 *.swp
-Jobs/
+# Jobs 目录：上传配置/数据，排除可再生成的二进制输出
+Jobs/**/figure/
+Jobs/**/*.npy
+Jobs/**/*.DS_Store

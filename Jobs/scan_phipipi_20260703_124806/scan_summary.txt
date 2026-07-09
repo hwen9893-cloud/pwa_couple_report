@@ -1,0 +1,25 @@
+# Scan generated : 2026-07-03 12:48:06
+# Strategy       : add-one / replace (BW↔Flatté互斥对自动替换)
+# phihh template : /afs/cern.ch/work/h/hwen/public/pwa/auto-init/phihh
+# Total jobs     : 15
+# States_phikk   : FIXED (unchanged)
+
+# baseline pipi  : f0(500)_E791, f0(980)_flatte, f2(1270)_flatte, f0(1370), f0(1500)_flatte, f0(1710), f0(1770), f2(1430), f2(1950)
+
+tag                                       action    added                   replaces                jobdir
+----------------------------------------------------------------------------------------------------------------------------------
+000_baseline                              baseline  None                    None                    /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/000_baseline
+001_add_NR_pipi_0                         add       NR_pipi_0+              None                    /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/001_add_NR_pipi_0
+002_add_NR_pipi_2                         add       NR_pipi_2+              None                    /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/002_add_NR_pipi_2
+003_rep_f2_1270                           replace   f2(1270)                f2(1270)_flatte         /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/003_rep_f2_1270
+004_rep_f0_1370_flatte                    replace   f0(1370)_flatte         f0(1370)                /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/004_rep_f0_1370_flatte
+005_rep_f0_1500                           replace   f0(1500)                f0(1500)_flatte         /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/005_rep_f0_1500
+006_add_f2_1525                           add       f2(1525)                None                    /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/006_add_f2_1525
+007_add_f2_1565                           add       f2(1565)                None                    /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/007_add_f2_1565
+008_rep_f0_1710_flatte                    replace   f0(1710)_flatte         f0(1710)                /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/008_rep_f0_1710_flatte
+009_rep_f2_1430_flatte                    replace   f2(1430)_flatte         f2(1430)                /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/009_rep_f2_1430_flatte
+010_add_f2_1810                           add       f2(1810)                None                    /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/010_add_f2_1810
+011_add_f2_1910                           add       f2(1910)                None                    /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/011_add_f2_1910
+012_add_f2_2010                           add       f2(2010)                None                    /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/012_add_f2_2010
+013_add_f2_2150                           add       f2(2150)                None                    /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/013_add_f2_2150
+014_add_f2_2300                           add       f2(2300)                None                    /afs/cern.ch/work/h/hwen/public/pwa/auto-init/Jobs/scan_phipipi_20260703_124806/014_add_f2_2300
